@@ -89,10 +89,27 @@ public class PlayerFarmer : MonoBehaviour {
 
                         }
 
+
                     }
 
 
                 }
+            }
+            if (currentResources >= 1 && Gathering == true)
+            {
+                Debug.Log("Returning to dumpster");
+
+                myAgent.SetDestination(Dumpster.transform.position);
+
+
+            }
+            if (currentResources <= 0 && Gathering == true)
+            {
+                Debug.Log("Returning to dumpster");
+
+                myAgent.SetDestination(Target.transform.position);
+
+
             }
         }
     }

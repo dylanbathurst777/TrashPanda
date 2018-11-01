@@ -426,10 +426,17 @@ public class UIM : MonoBehaviour {
             Instantiate(wallLevel3, CurrentselectedWall.transform.position, CurrentselectedWall.transform.rotation);
             Destroy(UpgradewallCurrentselectedWall);
         }
+
+        
      
        
        
     }
+    public void GameOver()
+    {
+        SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
+    }
+
     public void Selling()
     {
       

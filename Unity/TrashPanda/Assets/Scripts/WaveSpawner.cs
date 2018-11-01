@@ -10,9 +10,10 @@ public class WaveSpawner : MonoBehaviour {
     public class Wave
     {
         public string name;
-        public Transform enemy;
+        public Transform[] enemy;
         public int count;
         public float rate;
+       public int randomTrain;
     }
 
     public Wave[] waves;
@@ -125,9 +126,11 @@ public class WaveSpawner : MonoBehaviour {
     {
         Debug.Log("Spawning Wave:" + _wave.name);
         state = SpawnState.SPAWNING;
-       for(int i = 0; i < _wave.count; i++)
+        for (int i = 0; i < _wave.count; i++)
         {
-            SpawnEnemy(_wave.enemy);
+           _wave.randomTrain = Random.RandomRange(0, 5);
+
+            SpawnEnemy(_wave.enemy[_wave.randomTrain]);
             yield return new WaitForSeconds(1f / _wave.rate);
         }
 

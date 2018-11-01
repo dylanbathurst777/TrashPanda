@@ -1,0 +1,264 @@
+fileFormatVersion: 2
+guid: caf1fec715e1f9649a43113de7403fd5
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Ankle_LT
+    100002: Ankle_LT 1
+    100004: Ankle_LT1
+    100006: Ankle_LT2
+    100008: Ankle_LT_FK_Ctrl
+    100010: Ankle_RT
+    100012: Ankle_RT 1
+    100014: Ankle_RT1
+    100016: Ankle_RT2
+    100018: Ankle_RT_FK_Ctrl
+    100020: Chest_Ctrl
+    100022: Controls
+    100024: Elbow_LT
+    100026: Elbow_LT_Ctrl
+    100028: Elbow_LT_PoleVector
+    100030: Elbow_RT
+    100032: Elbow_RT_Ctrl
+    100034: Elbow_RT_PoleVector
+    100036: Foot_End_LT
+    100038: Foot_End_RT
+    100040: Foot_LT
+    100042: Foot_LT_FK_Ctrl
+    100044: Foot_LT_IK_Ctrl
+    100046: Foot_RT
+    100048: Foot_RT_FK_Ctrl
+    100050: Foot_RT_IK_Ctrl
+    100052: Geo
+    100054: Hand_End_LT
+    100056: Hand_End_RT
+    100058: Hand_LT
+    100060: Hand_LT_FK_Ctrl
+    100062: Hand_LT_IK_Ctrl
+    100064: Hand_RT
+    100066: Hand_RT_FK_Ctrl
+    100068: Hand_RT_IK_Ctrl
+    100070: Head
+    100072: Head_Ctrl
+    100074: Head_End
+    100076: Hip_Ctrl
+    100078: Hip_LT
+    100080: Hip_RT
+    100082: IK
+    100084: IK_Back_Leg_LT
+    100086: IK_Back_Leg_RT
+    100088: IK_Front_Leg_LT
+    100090: IK_Front_Leg_RT
+    100092: Joints
+    100094: Knee_LT
+    100096: Knee_LT_Ctrl
+    100098: Knee_LT_PoleVector
+    100100: Knee_RT
+    100102: Knee_RT_Ctrl
+    100104: Knee_RT_PoleVector
+    100106: Main_Ctrl
+    100108: Panda_Raccoon_Main
+    100110: PoleVector
+    100112: Raccoon
+    100114: Red_Panda
+    100116: //RootNode
+    100118: Rig
+    100120: Root
+    100122: Root_Ctrl
+    100124: Shoulder_LT
+    100126: Shoulder_RT
+    100128: Spine_Back
+    100130: Spine_Ctrl
+    100132: Spine_Front
+    100134: Spine_Mid
+    100136: Tail_1
+    100138: Tail_1_Ctrl
+    100140: Tail_2
+    100142: Tail_2_Ctrl
+    100144: Tail_3
+    100146: Tail_3_Ctrl
+    100148: Tail_4
+    100150: Tail_4_Ctrl
+    100152: Tail_5
+    100154: Tail_Base
+    100156: Tail_Base_Ctrl
+    100158: Tail_End
+    100160: Tail_End_Ctrl
+    100162: Wrist_LT_FK_Ctrl
+    100164: Wrist_RT_FK_Ctrl
+    400000: Ankle_LT
+    400002: Ankle_LT 1
+    400004: Ankle_LT1
+    400006: Ankle_LT2
+    400008: Ankle_LT_FK_Ctrl
+    400010: Ankle_RT
+    400012: Ankle_RT 1
+    400014: Ankle_RT1
+    400016: Ankle_RT2
+    400018: Ankle_RT_FK_Ctrl
+    400020: Chest_Ctrl
+    400022: Controls
+    400024: Elbow_LT
+    400026: Elbow_LT_Ctrl
+    400028: Elbow_LT_PoleVector
+    400030: Elbow_RT
+    400032: Elbow_RT_Ctrl
+    400034: Elbow_RT_PoleVector
+    400036: Foot_End_LT
+    400038: Foot_End_RT
+    400040: Foot_LT
+    400042: Foot_LT_FK_Ctrl
+    400044: Foot_LT_IK_Ctrl
+    400046: Foot_RT
+    400048: Foot_RT_FK_Ctrl
+    400050: Foot_RT_IK_Ctrl
+    400052: Geo
+    400054: Hand_End_LT
+    400056: Hand_End_RT
+    400058: Hand_LT
+    400060: Hand_LT_FK_Ctrl
+    400062: Hand_LT_IK_Ctrl
+    400064: Hand_RT
+    400066: Hand_RT_FK_Ctrl
+    400068: Hand_RT_IK_Ctrl
+    400070: Head
+    400072: Head_Ctrl
+    400074: Head_End
+    400076: Hip_Ctrl
+    400078: Hip_LT
+    400080: Hip_RT
+    400082: IK
+    400084: IK_Back_Leg_LT
+    400086: IK_Back_Leg_RT
+    400088: IK_Front_Leg_LT
+    400090: IK_Front_Leg_RT
+    400092: Joints
+    400094: Knee_LT
+    400096: Knee_LT_Ctrl
+    400098: Knee_LT_PoleVector
+    400100: Knee_RT
+    400102: Knee_RT_Ctrl
+    400104: Knee_RT_PoleVector
+    400106: Main_Ctrl
+    400108: Panda_Raccoon_Main
+    400110: PoleVector
+    400112: Raccoon
+    400114: Red_Panda
+    400116: //RootNode
+    400118: Rig
+    400120: Root
+    400122: Root_Ctrl
+    400124: Shoulder_LT
+    400126: Shoulder_RT
+    400128: Spine_Back
+    400130: Spine_Ctrl
+    400132: Spine_Front
+    400134: Spine_Mid
+    400136: Tail_1
+    400138: Tail_1_Ctrl
+    400140: Tail_2
+    400142: Tail_2_Ctrl
+    400144: Tail_3
+    400146: Tail_3_Ctrl
+    400148: Tail_4
+    400150: Tail_4_Ctrl
+    400152: Tail_5
+    400154: Tail_Base
+    400156: Tail_Base_Ctrl
+    400158: Tail_End
+    400160: Tail_End_Ctrl
+    400162: Wrist_LT_FK_Ctrl
+    400164: Wrist_RT_FK_Ctrl
+    2100000: lambert2
+    4300000: Red_Panda
+    4300002: Raccoon
+    7400000: Red_Panda_Animation
+    9500000: //RootNode
+    13700000: Raccoon
+    13700002: Red_Panda
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert2
+    second: {fileID: 2100000, guid: 7adf8f7b917830941856d8ce3ef119c3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

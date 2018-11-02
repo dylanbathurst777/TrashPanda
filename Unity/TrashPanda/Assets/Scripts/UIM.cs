@@ -49,8 +49,10 @@ public class UIM : MonoBehaviour {
 
     public Button sellingButton;
 
-
+    public Text DaylightText;
     public Text CurrencyText;
+    public Text DaysSurvivedText;
+    [SerializeField]
     public int CurrencyTotal;
     public int HouseCost = -20;
     public int WallCost = -5;
@@ -71,11 +73,15 @@ public class UIM : MonoBehaviour {
     public int NumberofHouses;
     public int maxUnits;
     public int CurrentUnits;
+    public bool Restartgame;
 
-
+    public WaveSpawner gm;
     public PlayerFarmer playerfarm;
+    public GameObject gameOverScreen;
 
+    public GameObject Dumpster;
 
+    public Player play;
 
 
     // Main Menu
@@ -87,7 +93,9 @@ public class UIM : MonoBehaviour {
     }
         public void Start()
     {
-
+        Time.timeScale = 1f;
+        gm = FindObjectOfType<WaveSpawner>();
+        Restartgame = false;
 
         maxUnits = 0;
 
@@ -118,8 +126,11 @@ public class UIM : MonoBehaviour {
     }
     void FixedUpdate()
     {
-       
 
+        if(Dumpster == null)
+        {
+            GameOver();
+       }
         CurrencyUpdate();
 
         if(UpgradewallCurrentselectedWall == null)
@@ -168,13 +179,28 @@ public class UIM : MonoBehaviour {
     
     public void CurrencyUpdate()
     {
+
+        if (CurrencyTotal <= 999)
+        {
+            CurrencyText.text = "Scrap:0" + CurrencyTotal.ToString();
+        }
+        if (CurrencyTotal <= 99)
+        {
+            CurrencyText.text = "Scrap:00" + CurrencyTotal.ToString();
+        }
+        if (CurrencyTotal <= 9)
+        {
+            CurrencyText.text = "Scrap:000" + CurrencyTotal.ToString();
+        }
+       // CurrencyText.text = "Scrap:" + CurrencyTotal.ToString();
         if (CurrentUnits < maxUnits)
         {
-            
 
 
 
-            CurrencyText.text = "Scrap:" + CurrencyTotal.ToString();
+
+
+           
             if (CurrencyTotal < 50 && activatedGate)
             {
                 activatedGate.gameObject.SetActive(false);
@@ -240,18 +266,7 @@ public class UIM : MonoBehaviour {
                 deactivatedWall.gameObject.SetActive(false);
             }
 
-            if (CurrencyTotal <= 999)
-            {
-                CurrencyText.text = "Scrap:0" + CurrencyTotal.ToString();
-            }
-            if (CurrencyTotal <= 99)
-            {
-                CurrencyText.text = "Scrap:00" + CurrencyTotal.ToString();
-            }
-            if (CurrencyTotal <= 9)
-            {
-                CurrencyText.text = "Scrap:000" + CurrencyTotal.ToString();
-            }
+          
         }
         if(CurrentUnits > maxUnits)
         {
@@ -338,7 +353,7 @@ public class UIM : MonoBehaviour {
     public void Restart()
 
     {
-
+        Restartgame = true;
         SceneManager.LoadScene("Level_1");
 
     }
@@ -395,7 +410,10 @@ public class UIM : MonoBehaviour {
 
     public void LoadMenu()
     {
+
+        Restartgame = true;
         Time.timeScale = 1f;
+       
         SceneManager.LoadScene("Level_1");
     }
 
@@ -434,7 +452,10 @@ public class UIM : MonoBehaviour {
     }
     public void GameOver()
     {
-        SceneManager.LoadScene("OtherSceneName", LoadSceneMode.Additive);
+        gameOverScreen.SetActive(true);
+       DaysSurvivedText.text = gm.daysAlive.ToString();
+        Time.timeScale = 0f;
+        GameIsPaused = true;
     }
 
     public void Selling()

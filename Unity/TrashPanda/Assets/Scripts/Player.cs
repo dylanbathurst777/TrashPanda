@@ -47,6 +47,7 @@ public class Player : SerializedMonoBehaviour, IPointerClickHandler, ISelectHand
 
     public NavMeshAgent agent;
     public GameObject target;
+    public UIM uiman;
 
     public enum STATE { idle, Moving, Combat};
     public STATE currentState;
@@ -73,10 +74,17 @@ public class Player : SerializedMonoBehaviour, IPointerClickHandler, ISelectHand
         damageText = GetComponentInChildren<DamageText>();
         minionColor = playerRenderer.material.color;
         ChangeState(STATE.idle);
+        uiman = FindObjectOfType<UIM>();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (uiman.Restartgame == true)
+        {
+            allMySelectables.Remove(this);
+            currentlySelected.Remove(this);
+        }
+
         Movement();
 
         Enemy[] enemies = GameObject.FindObjectsOfType<Enemy>();

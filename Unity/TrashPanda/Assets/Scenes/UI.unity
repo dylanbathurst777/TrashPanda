@@ -589,6 +589,31 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1357858260137274, guid: a81730d3a594e3745a885d2f6bc7d313, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767200517353986, guid: a81730d3a594e3745a885d2f6bc7d313, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1962914796776764, guid: a81730d3a594e3745a885d2f6bc7d313, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1665279188457304, guid: a81730d3a594e3745a885d2f6bc7d313, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1779261639745322, guid: a81730d3a594e3745a885d2f6bc7d313, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114732564331713218, guid: a81730d3a594e3745a885d2f6bc7d313,
+        type: 2}
+      propertyPath: Dumpster
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a81730d3a594e3745a885d2f6bc7d313, type: 2}
   m_IsPrefabParent: 0

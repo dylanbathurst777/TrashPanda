@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,15 +15,18 @@ public class WaveSpawner : MonoBehaviour {
         public int count;
         public float rate;
        public int randomTrain;
+        
     }
 
     public Wave[] waves;
+    public int daysAlive = 0;
     private int nextWave = 0;
 
     public Transform[] spawnPoints;
 
     public float timeBetweenWaves = 5f;
     public float waveCountdown;
+    public int waveCountdownint;
     private float searchCountdown = 1f;
 
     public  Enemy enemyscript;
@@ -35,11 +39,13 @@ public class WaveSpawner : MonoBehaviour {
 	
 	void Start ()
     {
+       
         uiMan = FindObjectOfType<UIM>();
         uiMan.sunImage.gameObject.SetActive(true);
         uiMan.moonImage.gameObject.SetActive(false);
         waveCountdown = timeBetweenWaves;
-
+        waveCountdownint = Convert.ToInt32(waveCountdown); 
+        uiMan.DaylightText.text = "DaylightTimer "  + waveCountdownint.ToString();
         if (spawnPoints.Length == 0)
         {
             Debug.LogError("No spawnpoints referencede");
@@ -50,7 +56,10 @@ public class WaveSpawner : MonoBehaviour {
 	
 	void Update ()
     {
-        if(state == SpawnState.WAITING)
+        waveCountdownint = Convert.ToInt32(waveCountdown);
+        uiMan.DaylightText.text = "DaylightTimer " + waveCountdownint.ToString();
+
+        if (state == SpawnState.WAITING)
         {
             uiMan.sunImage.gameObject.SetActive(false);
             uiMan.moonImage.gameObject.SetActive(true);
@@ -102,6 +111,7 @@ public class WaveSpawner : MonoBehaviour {
         else
         {
             nextWave++;
+            daysAlive++;
         }
       
 
@@ -116,6 +126,7 @@ public class WaveSpawner : MonoBehaviour {
             searchCountdown = 1f;
             if (GameObject.FindGameObjectWithTag("Enemy") == null)
             {
+              
                 return false;
             }
         }
@@ -128,13 +139,14 @@ public class WaveSpawner : MonoBehaviour {
         state = SpawnState.SPAWNING;
         for (int i = 0; i < _wave.count; i++)
         {
-           _wave.randomTrain = Random.RandomRange(0, 5);
-
+           _wave.randomTrain = UnityEngine.Random.RandomRange(0, 5);
+           
             SpawnEnemy(_wave.enemy[_wave.randomTrain]);
             yield return new WaitForSeconds(1f / _wave.rate);
         }
 
         state = SpawnState.WAITING;
+        
 
         yield break;
     }
@@ -145,7 +157,7 @@ public class WaveSpawner : MonoBehaviour {
         //spawnEnemy
 
        
-        Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
+        Transform _sp = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
         Instantiate(_enemy, _sp.position, transform.rotation);
        
     }

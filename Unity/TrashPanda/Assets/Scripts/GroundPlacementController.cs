@@ -197,6 +197,7 @@ public class GroundPlacementController : MonoBehaviour {
     public void SpawnRangeUnit()
     {
         uiMan.CurrencyTotal += uiMan.RangeUnit;
+        uiMan.CurrentUnits++;
         index = UnityEngine.Random.Range(0, spawnPoints.Length);
         currentSpawn = spawnPoints[index];
         Instantiate(RangeUnitPrefab, currentSpawn.transform.position, Quaternion.identity);
@@ -208,6 +209,7 @@ public class GroundPlacementController : MonoBehaviour {
     public void SpawnMeleeUnit()
     {
         uiMan.CurrencyTotal += uiMan.MeleeUnit;
+        uiMan.CurrentUnits++;
         index = UnityEngine.Random.Range(0, spawnPoints.Length);
         currentSpawn = spawnPoints[index];
         Instantiate(MeleeUnitPrefab, currentSpawn.transform.position, Quaternion.identity);
@@ -219,6 +221,7 @@ public class GroundPlacementController : MonoBehaviour {
     public void SpawnFarmerUnit()
     {
         uiMan.CurrencyTotal += uiMan.FarmerUnit;
+        uiMan.CurrentUnits++;
         index = UnityEngine.Random.Range(0, spawnPoints.Length);
         currentSpawn = spawnPoints[index];
         Instantiate(FarmerUnitPrefab, currentSpawn.transform.position, Quaternion.identity);

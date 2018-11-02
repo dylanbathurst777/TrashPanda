@@ -22,6 +22,7 @@ public class PlayerFarmer : MonoBehaviour {
     void Start () {
         myAgent = GetComponent<NavMeshAgent>();
         uiMan = FindObjectOfType<UIM>();
+        Dumpster = FindObjectOfType<Dump>().gameObject;
     }
 	
 	// Update is called once per frame

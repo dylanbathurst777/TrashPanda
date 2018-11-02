@@ -93,6 +93,7 @@ public class UIM : MonoBehaviour {
     }
         public void Start()
     {
+        Dumpster = FindObjectOfType<Dump>().gameObject;
         Time.timeScale = 1f;
         gm = FindObjectOfType<WaveSpawner>();
         Restartgame = false;
@@ -192,7 +193,39 @@ public class UIM : MonoBehaviour {
         {
             CurrencyText.text = "Scrap:000" + CurrencyTotal.ToString();
         }
-       // CurrencyText.text = "Scrap:" + CurrencyTotal.ToString();
+        if (CurrencyTotal < 50 && activatedGate)
+        {
+            activatedGate.gameObject.SetActive(false);
+            deactivatedGate.gameObject.SetActive(true);
+        }
+        else
+        {
+            activatedGate.gameObject.SetActive(true);
+            deactivatedGate.gameObject.SetActive(false);
+        }
+        if (CurrencyTotal < 20 && activatedHouse)
+        {
+            activatedHouse.gameObject.SetActive(false);
+            deactivatedHouse.gameObject.SetActive(true);
+        }
+        else
+        {
+            activatedHouse.gameObject.SetActive(true);
+            deactivatedHouse.gameObject.SetActive(false);
+        }
+        if (CurrencyTotal < 5 && activatedWall)
+        {
+            activatedWall.gameObject.SetActive(false);
+            deactivatedWall.gameObject.SetActive(true);
+
+        }
+        else
+        {
+
+            activatedWall.gameObject.SetActive(true);
+            deactivatedWall.gameObject.SetActive(false);
+        }
+        // CurrencyText.text = "Scrap:" + CurrencyTotal.ToString();
         if (CurrentUnits < maxUnits)
         {
 
@@ -201,16 +234,7 @@ public class UIM : MonoBehaviour {
 
 
            
-            if (CurrencyTotal < 50 && activatedGate)
-            {
-                activatedGate.gameObject.SetActive(false);
-                deactivatedGate.gameObject.SetActive(true);
-            }
-            else
-            {
-                activatedGate.gameObject.SetActive(true);
-                deactivatedGate.gameObject.SetActive(false);
-            }
+           
             if (CurrencyTotal < 25 || CurrentUnits >= maxUnits)
             {
                 activatedMeleeUnit.gameObject.SetActive(false);
@@ -221,16 +245,7 @@ public class UIM : MonoBehaviour {
                 activatedMeleeUnit.gameObject.SetActive(true);
                 deactivatedMeleeUnit.gameObject.SetActive(false);
             }
-            if (CurrencyTotal < 20 && activatedHouse)
-            {
-                activatedHouse.gameObject.SetActive(false);
-                deactivatedHouse.gameObject.SetActive(true);
-            }
-            else
-            {
-                activatedHouse.gameObject.SetActive(true);
-                deactivatedHouse.gameObject.SetActive(false);
-            }
+          
             if (CurrencyTotal < 15 || CurrentUnits >= maxUnits)
             {
                 activatedRangeUnit.gameObject.SetActive(false);
@@ -253,18 +268,7 @@ public class UIM : MonoBehaviour {
                 deactivatedFarmUnit.gameObject.SetActive(false);
             }
 
-            if (CurrencyTotal < 5 && activatedWall)
-            {
-                activatedWall.gameObject.SetActive(false);
-                deactivatedWall.gameObject.SetActive(true);
-               
-            }
-            else
-            {
-               
-                activatedWall.gameObject.SetActive(true);
-                deactivatedWall.gameObject.SetActive(false);
-            }
+           
 
           
         }

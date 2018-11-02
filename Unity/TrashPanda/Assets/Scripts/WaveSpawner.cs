@@ -45,7 +45,7 @@ public class WaveSpawner : MonoBehaviour {
         uiMan.moonImage.gameObject.SetActive(false);
         waveCountdown = timeBetweenWaves;
         waveCountdownint = Convert.ToInt32(waveCountdown); 
-        uiMan.DaylightText.text = "DaylightTimer "  + waveCountdownint.ToString();
+        uiMan.DaylightText.text =  waveCountdownint.ToString();
         if (spawnPoints.Length == 0)
         {
             Debug.LogError("No spawnpoints referencede");
@@ -57,7 +57,7 @@ public class WaveSpawner : MonoBehaviour {
 	void Update ()
     {
         waveCountdownint = Convert.ToInt32(waveCountdown);
-        uiMan.DaylightText.text = "DaylightTimer " + waveCountdownint.ToString();
+        uiMan.DaylightText.text = waveCountdownint.ToString();
 
         if (state == SpawnState.WAITING)
         {

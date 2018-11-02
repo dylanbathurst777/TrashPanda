@@ -46,8 +46,9 @@ public class EnemyFollow : MonoBehaviour {
     // Use this for initialization
     void Start () {
         myAgent = GetComponent<NavMeshAgent>();
+        dumpster = FindObjectOfType<Dump>().gameObject;
 
-      
+
 
     }
 	

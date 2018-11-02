@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 114425736690158026}
   - component: {fileID: 135649967657918078}
   - component: {fileID: 54062288975220934}
+  - component: {fileID: 114905375142344888}
   m_Layer: 0
   m_Name: PlayerDumpster
   m_TagString: Building
@@ -387,7 +388,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1897602845767854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.2, y: 2, z: -37.5}
+  m_LocalPosition: {x: -0.4, y: 2, z: -1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4988123093250410}
@@ -996,6 +997,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114905375142344888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1897602845767854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eacd09dcd568c4c4ab1b790207c5fa8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135649967657918078
 SphereCollider:
   m_ObjectHideFlags: 1
